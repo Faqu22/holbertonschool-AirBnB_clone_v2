@@ -8,7 +8,7 @@ from models.state import State
 app = Flask(__name__)
 
 @app.teardown_appcontext
-def tearDown(arg):
+def tearDown(arg=None):
     storage.close()
 
 

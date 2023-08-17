@@ -12,7 +12,7 @@ class State(BaseModel, Base):
     __tablename__ = "states"
     name = Column(String(60), nullable=False)
     if getenv("HBNB_MYSQL_DB") == 'db':
-        cities = relationship("City", cascade="all, delete", backref="states")
+        cities = relationship("City", cascade="all, delete", backref="state")
     else:
         @property
         def cities(self):
