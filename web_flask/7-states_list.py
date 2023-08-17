@@ -2,7 +2,8 @@
 """ Task 6"""
 from flask import Flask, render_template
 
-from models import state, storage
+from models import storage
+from models.state import State
 
 app = Flask(__name__)
 
@@ -71,9 +72,8 @@ def route6(n):
 def route7():
     return render_template(
         '7-states_list.html',
-        states=storage.all(state).values()
+        states=storage.all(State).values()
     )
-
 
 
 if __name__ == '__main__':
