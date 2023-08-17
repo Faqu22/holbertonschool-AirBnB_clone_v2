@@ -62,7 +62,7 @@ def route6(n):
     """
     return render_template(
         '6-number_odd_or_even.html',
-        n=f"Number {n} is {'even' if n % 2 == 0 else 'odd'}")
+        n=f"Number: {n} is {'even' if n % 2 == 0 else 'odd'}")
 
 
 if __name__ == '__main__':
